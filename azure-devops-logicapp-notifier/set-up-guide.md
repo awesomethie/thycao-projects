@@ -25,7 +25,8 @@ In Azure DevOps, I added a field on the work item to store the requestor’s ema
 
 To do that:
 
-- go to **Project Settings**
+- go to **Organization Settings**
+![Edit Process](images/process.png)
 - open **Process**
 - select the work item type used for the backlog item or user story
 - add a custom field for the requestor email if needed
