@@ -25,7 +25,7 @@ In Azure DevOps, I added a field on the work item to store the requestor’s ema
 
 To do that:
 
-- go to **Organization Settings**
+- go to **Organization settings**
 
 ![Organization Settings](images/organization-settings.png)
 
@@ -38,7 +38,16 @@ To do that:
 ![Edit Process](images/edit-process.png)
 
 - select the work item type used for the backlog item or user story
-- add a custom field for the requestor email if needed
+
+![Work Item](images/work-item.png)
+
+- select **New Field**
+
+![Add New Field](images/add-new-field.png)
+
+- name the field and select type as **Identity**
+
+![Add New Field](images/requestor-field.png)
 
 Once this field exists, make sure it is filled in when the item is created. Without it, the Logic App has nobody to notify.
 
@@ -48,15 +57,29 @@ Once this field exists, make sure it is filled in when the item is created. With
 
 Next, I created the workflow in Azure.
 
-In the Azure portal:
+In the Azure portal (portal.azure.com):
 
 - create a new **Logic App**
-- open the designer
+
+![Logic App](images/logic-app.png)
+
+- select your subscription, resource group, and location
+- be careful when naming your logic app since you cannot change it later
+- after the app is created, open the **Logic app designer** under Development Tools
+
+![Logic App Designer](images/logic-app-designer.png)
+
 - choose **When an HTTP request is received** as the trigger
+- select **Save**
+- after saving the Logic App once, Azure generates an HTTP POST URL, copy this URL
 
-This trigger is important because Azure DevOps will call the Logic App through a webhook.
+![Logic App Designer](images/URL.png)
 
-After saving the Logic App once, Azure generates an HTTP POST URL. That URL is what Azure DevOps will use later.
+- go back to Azure Devops (dev.azure.com)
+- go to your project and select **Project settings**
+- select **Service hooks** and create a new one
+
+![Service Hools](images/service-hook.png)
 
 ---
 
