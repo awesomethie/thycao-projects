@@ -26,11 +26,13 @@ In Azure DevOps, I added a field on the work item to store the requestor’s ema
 To do that:
 
 - go to **Organization Settings**
+- 
 ![Organization Settings](images/process.png)
 
 - select **Process**
 - select the process that your project is using
-![Organization Settings](azure-devops-logicapp-notifier/images/edit-process.png)
+
+![Organization Settings](/images/edit-process.png)
 
 - select the work item type used for the backlog item or user story
 - add a custom field for the requestor email if needed
