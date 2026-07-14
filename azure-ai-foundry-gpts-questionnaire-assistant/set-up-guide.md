@@ -1,6 +1,6 @@
-# Cobase Security Questionnaire Assistant — Setup Guide
+# Questionnaire Assistant — Setup Guide
 
-A Claude-powered assistant that answers security & due-diligence questionnaires,
+A AI-powered assistant that answers security & due-diligence questionnaires,
 grounded in Cobase's policies, audit reports, and a curated answer bank. Claude is
 called through **Microsoft Foundry** (Azure's model platform); the app and knowledge
 base are version-controlled here on GitHub.
