@@ -150,8 +150,6 @@ If the condition is true, the workflow continues to the email step. If not, it d
 
 This keeps the flow simple and makes the purpose obvious when someone opens the Logic App later.
 
-*(Add screenshot here)*
-
 ---
 
 ## Send the email
