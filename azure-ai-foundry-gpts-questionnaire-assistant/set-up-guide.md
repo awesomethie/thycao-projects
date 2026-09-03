@@ -8,16 +8,9 @@ Before this setup was in place, the documents had to be reviewed and combined ma
 
 To make this process easier, I decided to use Claude Code to scan the documents, extract the relevant information and convert it into a smaller set of structured Markdown files.
 
-There was no separate company Claude account available, but Claude models were available through Microsoft Foundry. I therefore deployed a Claude model in Microsoft Foundry and connected it to Claude Code in Visual Studio Code.
+There was no separate company Claude account available, but Claude models were available through Microsoft Foundry. I therefore deployed a Claude model in Microsoft Foundry and connected it to Claude Code in Visual Studio Code. After having it reviewed the approved source documents and created the Markdown knowledge files, I created a custom GPTs that could use those files to work with Excel questionnaires.
 
-The idea is straightforward:
-
-* deploy a Claude model in Microsoft Foundry
-* install Claude Code in Visual Studio Code
-* connect Claude Code to the Foundry resource
-* authenticate using the Foundry API key
-* open a local folder containing the approved documents
-* ask Claude Code to review the files and build the knowledge base
+creating a custom GPT that could use those files to work with Excel questionnaires
 
 This guide explains how the setup was done.
 
