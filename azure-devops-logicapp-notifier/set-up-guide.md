@@ -190,7 +190,7 @@ That is enough to make the update useful without overcomplicating the template.
     "path": "/v2/SharedMailbox/Mail"
   }
 }
-
+'''
 ---
 
 ## Test the flow
