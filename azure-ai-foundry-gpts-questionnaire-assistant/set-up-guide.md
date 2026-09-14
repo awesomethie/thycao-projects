@@ -10,8 +10,6 @@ To make this process easier, I decided to use Claude Code to scan the documents,
 
 There was no separate company Claude account available, but Claude models were available through Microsoft Foundry. I therefore deployed a Claude model in Microsoft Foundry and connected it to Claude Code in Visual Studio Code. After having it reviewed the approved source documents and created the Markdown knowledge files, I created a custom GPTs that could use those files to work with Excel questionnaires.
 
-creating a custom GPT that could use those files to work with Excel questionnaires
-
 This guide explains how the setup was done.
 
 ## Create a Microsoft Foundry resource
