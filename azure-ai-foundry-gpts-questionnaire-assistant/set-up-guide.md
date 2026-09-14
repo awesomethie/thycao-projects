@@ -29,6 +29,8 @@ If the option is not available, ask your Azure administrator to give you access 
 
 After the resource has been created, make a note of the resource name.
 
+![Create a Foundry Resource](images/foundry-create-resource.png)
+
 The resource name will later be used in the Claude Code configuration.
 
 For example:
