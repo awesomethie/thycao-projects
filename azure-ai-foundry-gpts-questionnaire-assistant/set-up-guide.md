@@ -36,10 +36,10 @@ The resource name will later be used in the Claude Code configuration.
 For example:
 
 ```text
-<foundry-resource-name>
+<thycao-2944-resource>
 ```
 
-Do not use a real resource name in public documentation if it contains a personal name, company name or internal project name.
+
 
 ## Deploy the Claude model
 
@@ -53,6 +53,7 @@ To do that:
 * search for the Claude model you want to use
 * select the model
 * select **Deploy**
+![Deploy an AI Model](images/deploy-ai-model.png)
 * choose the project where the model should be deployed
 * enter a deployment name
 * complete the deployment
