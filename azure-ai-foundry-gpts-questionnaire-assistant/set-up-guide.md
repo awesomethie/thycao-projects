@@ -53,12 +53,16 @@ To do that:
 * search for the Claude model you want to use
 * select the model
 * select **Deploy**
+
 ![Deploy an AI Model](images/deploy-ai-model.png)
+
 * choose the project where the model should be deployed
 * enter a deployment name
 * complete the deployment
 
-After the deployment has finished, make a note of the deployment name.
+After the deployment has finished, make a note of the deployment name or you can view your deployment here.
+
+![View Deployment](images/foundry-view-deployment.png)
 
 For example:
 
