@@ -168,7 +168,7 @@ The subject and body can be kept simple. For example, the email can mention:
 
 That is enough to make the update useful without overcomplicating the template.
 
-### Sample configuration
+**Sample configuration**
 
 ```json
 {
@@ -190,7 +190,7 @@ That is enough to make the update useful without overcomplicating the template.
     "path": "/v2/SharedMailbox/Mail"
   }
 }
-'''
+```
 ---
 
 ## Test the flow
