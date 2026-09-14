@@ -168,6 +168,29 @@ The subject and body can be kept simple. For example, the email can mention:
 
 That is enough to make the update useful without overcomplicating the template.
 
+### Sample configuration
+
+```json
+{
+  "type": "ApiConnection",
+  "inputs": {
+    "host": {
+      "connection": {
+        "referenceName": "<office365-connection>"
+      }
+    },
+    "method": "post",
+    "body": {
+      "MailboxAddress": "<shared-mailbox@example.com>",
+      "To": "@if(\n  contains(triggerBody()?['resource']?['revision']?['fields']?['Custom.RequestorField'], '<'),\n  last(split(first(split(triggerBody()?['resource']?['revision']?['fields']?['Custom.RequestorField'], '>')), '<')),\n  triggerBody()?['resource']?['revision']?['fields']?['Custom.RequestorField']\n)",
+      "Subject": "Work Item Ready for Testing",
+      "Body": "<p class=\"editor-paragraph\">Hi @{if(\n  contains(triggerBody()?['resource']?['revision']?['fields']?['Custom.RequestorField'], '<'),\n  trim(first(split(triggerBody()?['resource']?['revision']?['fields']?['Custom.RequestorField'], '<'))),\n  triggerBody()?['resource']?['revision']?['fields']?['Custom.RequestorField']\n)},</p><p class=\"editor-paragraph\">The following item is ready for testing.</p><p class=\"editor-paragraph\">ID: @{string(triggerBody()?['resource']?['workItemId'])}</p><p class=\"editor-paragraph\">Title: @{concat('<a href=\"', triggerBody()?['resource']?['_links']?['html']?['href'], '\">', triggerBody()?['resource']?['revision']?['fields']?['System.Title'], '</a>')}</p><br><p class=\"editor-paragraph\">@{if(or(not(empty(triggerBody()?['resource']?['revision']?['fields']?['Custom.ServiceNameField'])), not(empty(triggerBody()?['resource']?['revision']?['fields']?['Custom.SetupInstructionsField']))), '<p style=\"margin:16px 0 0 0;\">Please use the service below and follow the setup instructions when testing.</p>', '')}</p><p class=\"editor-paragraph\">@{if(empty(triggerBody()?['resource']?['revision']?['fields']?['Custom.ServiceNameField']), '', concat('<div style=\"margin:16px 0 0 0;\"><strong>Service Name:</strong><br>', triggerBody()?['resource']?['revision']?['fields']?['Custom.ServiceNameField'], '</div>'))}</p><p class=\"editor-paragraph\">@{if(empty(triggerBody()?['resource']?['revision']?['fields']?['Custom.SetupInstructionsField']), '', concat('<div style=\"margin:12px 0 0 0;\"><strong>Setup Instructions:</strong><br>', triggerBody()?['resource']?['revision']?['fields']?['Custom.SetupInstructionsField'], '</div>'))}</p><br>",
+      "Importance": "Normal"
+    },
+    "path": "/v2/SharedMailbox/Mail"
+  }
+}
+
 ---
 
 ## Test the flow
